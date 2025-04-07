@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SweetCam GSoC Application</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My CV & SweetCam GSoC Plan</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
     .tab-link {
       transition: all 0.3s ease;
     }
@@ -28,144 +24,144 @@
       transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-5px);
       box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body class="bg-gradient-to-r from-indigo-100 via-purple-100 to-indigo-200 font-sans text-gray-800">
 
-  <div class="container mx-auto p-8">
-    <header class="text-center mb-12">
-      <h1 class="text-5xl font-extrabold text-indigo-800 mb-2">SweetCam GSoC 2025 Application</h1>
-      <p class="text-xl text-gray-700">By Olha Patsyienko</p>
+  <div class="container mx-auto p-6 max-w-4xl">
+
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-5xl font-extrabold text-indigo-800">My CV & SweetCam GSoC 2025 Plan</h1>
+      <p class="text-xl mt-3 text-gray-700">Full-stack security enthusiast with a focus on honeypots and automation</p>
     </header>
 
-    <!-- Basic Info Section -->
-    <section class="mb-10">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Personal Information</h2>
-      <p><strong>Name:</strong> Olha Patsyienko</p>
-      <p><strong>Location:</strong> Waterford, Ireland</p>
-      <p><strong>School:</strong> South East Technological University</p>
-      <p><strong>Degree:</strong> BSc (Hons) in Computer Forensics and Security</p>
+    <!-- CV Section -->
+    <section id="cv">
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Personal Information</h2>
+        <p><strong>Name:</strong> Olha Patsyienko</p>
+        <p><strong>Location:</strong> Waterford, Ireland</p>
+        <p><strong>School:</strong> South East Technological University</p>
+        <p><strong>Degree:</strong> BSc (Hons) in Computer Forensics and Security</p>
+      </div>
+
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Education</h2>
+        <p><strong>SETU | Waterford, Ireland</strong></p>
+        <p>BSc (Hons) in Computer Forensics and Security (2023 - 2027)</p>
+        <p><strong>Courses:</strong> File System Forensics, Secure Programming, Operating Systems, Networking, Databases, Cryptography</p>
+      </div>
+
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Technical Skills</h2>
+        <ul class="list-disc pl-6">
+          <li>Digital Forensics, Malware Analysis, SIEM (Splunk)</li>
+          <li>Programming (Python, SQL)</li>
+          <li>Linux/Windows, Networking (TCP/IP, Firewalls, IDS/IPS), AWS</li>
+          <li>Tools: Wireshark, Ghidra, Autopsy</li>
+          <li>Problem Solving, Teamwork, Automation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Projects</h2>
+        <h3 class="text-xl font-semibold">Blood Cell Analyser</h3>
+        <p>95% accurate medical image classifier using noise reduction and detection algorithms.</p>
+        <h3 class="text-xl font-semibold mt-2">Drinks Menu App</h3>
+        <p>Search & sort system for bar stock, reduced training time by 40%.</p>
+        <h3 class="text-xl font-semibold mt-2">Hardware Store DB</h3>
+        <p>Relational database with CRUD operations for stock management.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Experience</h2>
+        <h3 class="text-xl font-semibold">Computer Dept. Rep @ SETU</h3>
+        <p>Spoke to prospective students, gave cybersecurity demos.</p>
+        <h3 class="text-xl font-semibold mt-2">CTF Team Leader</h3>
+        <p>Led ZeroDays CTF team, assigning roles and solving challenges.</p>
+        <h3 class="text-xl font-semibold mt-2">Staff @ Supermacs</h3>
+        <p>Customer support, conflict resolution, team service.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Contact</h2>
+        <p><strong>Email:</strong> opacienko52@gmail.com </p>
+        <p><strong>GitHub:</strong> https://github.com/cinkpts3 </p>
+        <p><strong>LinkedIn:</strong>www.linkedin.com/in/olhapatsyienko</p>
+      </div>
     </section>
 
-    <!-- Education -->
-    <section class="mb-10">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Education</h2>
-      <p><strong>South East Technological University | Waterford, Ireland</strong></p>
-      <p>BSc (Hons) Computer Forensics and Security (2023 - 2027)</p>
-      <p><strong>Relevant Courses:</strong> File System Forensics, Secure Programming & Scripting, Operating Systems, Computer Networks, Relational Databases, Applied Cryptography</p>
-    </section>
+    <!-- Tabs for SweetCam Plan -->
+    <section id="sweetcam" class="mt-16">
+      <div class="text-center mb-6">
+        <h2 class="text-4xl font-bold text-indigo-800">GSoC Implementation Plan: SweetCam</h2>
+      </div>
 
-    <!-- Skills -->
-    <section class="mb-10">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Technical Skills</h2>
-      <ul class="list-disc pl-6">
-        <li>Digital Forensics, Malware Analysis, SIEM (Splunk)</li>
-        <li>Programming (Python, SQL, Java, JavaScript)</li>
-        <li>Windows/Linux, Networking (TCP/IP, Firewalls, IDS/IPS), AWS</li>
-        <li>Security Tools: Wireshark, Ghidra Basics, Autopsy</li>
-        <li>Problem Solving, Teamwork, Automation, Secure Programming</li>
-      </ul>
-    </section>
-
-    <!-- Projects -->
-    <section class="mb-10">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Projects</h2>
-      <h3 class="font-semibold">Blood Cell Analyser</h3>
-      <p>Built a 95% accurate image analysis tool for medical blood samples. Implemented colour change, noise reduction, and object detection algorithms.</p>
-      <h3 class="font-semibold mt-4">Drinks Menu Application</h3>
-      <p>Developed a custom search & sort algorithm for a bar management system. Reduced staff training time by 40%.</p>
-      <h3 class="font-semibold mt-4">Hardware Shop Database Prototype</h3>
-      <p>Designed a relational database and efficient CRUD operations for inventory/sales.</p>
-    </section>
-
-    <!-- Experience -->
-    <section class="mb-10">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Volunteering & Relevant Experience</h2>
-      <p><strong>Computer Department Representative:</strong> Represented CS department at Open Day.</p>
-      <p><strong>CTF Team Leader | ZeroDays:</strong> Led ethical hacking team; solved real-time security challenges.</p>
-      <p><strong>Staff Member | Supermacs:</strong> Developed customer handling and teamwork skills.</p>
-    </section>
-
-    <!-- GSoC Questions -->
-    <section class="mb-10">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">GSoC Specifics</h2>
-      <p><strong>Top Project Choice:</strong> Improving the SweetCam IP Camera Honeypot</p>
-      <p><strong>Open to Other Projects:</strong> Yes! I’m flexible and happy to contribute wherever needed.</p>
-      <p><strong>Languages:</strong> Python, Java, JavaScript — but willing to learn anything!</p>
-      <p><strong>OS Development:</strong> Network app dev on Debian/Kali; some Windows experience</p>
-      <p><strong>Honeynet Tools:</strong> No direct experience, but used Cowrie in learning environments</p>
-      <p><strong>Open Source:</strong> No contributions yet — excited to start!</p>
-      <p><strong>GSoC Experience:</strong> First time applying</p>
-      <p><strong>Availability:</strong> Full-time availability throughout project</p>
-      <p><strong>Why Me:</strong> I'm curious, fast-learning, and genuinely passionate about honeypots and cybersecurity.</p>
-    </section>
-
-    <!-- Tabs Section -->
-    <section class="mb-10">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-6 text-center">Implementation Plan</h2>
-      <nav class="flex justify-center flex-wrap gap-4 mb-6">
-        <button class="tab-link py-2 px-4 text-white rounded bg-indigo-600 hover:bg-indigo-700" onclick="showTab('overview')">Overview</button>
-        <button class="tab-link py-2 px-4 text-white rounded bg-indigo-600 hover:bg-indigo-700" onclick="showTab('template')">Template Emulation</button>
-        <button class="tab-link py-2 px-4 text-white rounded bg-indigo-600 hover:bg-indigo-700" onclick="showTab('protocol')">Protocol Support</button>
-        <button class="tab-link py-2 px-4 text-white rounded bg-indigo-600 hover:bg-indigo-700" onclick="showTab('docker')">Docker</button>
-        <button class="tab-link py-2 px-4 text-white rounded bg-indigo-600 hover:bg-indigo-700" onclick="showTab('http')">HTTP Interface</button>
+      <nav class="flex justify-center flex-wrap gap-3 mb-6">
+        <button class="tab-link py-2 px-4 bg-indigo-600 text-white rounded-lg" onclick="showTab('overview')">Overview</button>
+        <button class="tab-link py-2 px-4 bg-indigo-600 text-white rounded-lg" onclick="showTab('template')">Templates</button>
+        <button class="tab-link py-2 px-4 bg-indigo-600 text-white rounded-lg" onclick="showTab('protocol')">Protocols</button>
+        <button class="tab-link py-2 px-4 bg-indigo-600 text-white rounded-lg" onclick="showTab('docker')">Docker</button>
+        <button class="tab-link py-2 px-4 bg-indigo-600 text-white rounded-lg" onclick="showTab('http')">HTTP</button>
       </nav>
 
       <div id="overview" class="tab-content active card">
         <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Project Overview</h3>
-        <p>This project aims to transform SweetCam from a basic honeypot into a versatile, multi-protocol security tool.</p>
+        <p>This project aims to transform SweetCam into a modular, multi-protocol honeypot simulating real-world IP cameras using ONVIF, RTSP, and customizable templates. We'll focus on flexibility, realism, and deployment simplicity.</p>
       </div>
 
       <div id="template" class="tab-content card">
         <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Template-Based Device Emulation</h3>
         <ul class="list-disc pl-6">
-          <li>YAML templates define metadata, protocols, and UI</li>
-          <li>Supports inheritance and JSON Schema validation</li>
-          <li>CLI tools: <code>sweetcam template validate</code>, <code>list</code></li>
+          <li>YAML-based metadata: brand, firmware, network settings</li>
+          <li>Support for inheritance and JSON Schema validation</li>
+          <li>CLI tools: <code>sweetcam template list</code>, <code>validate</code></li>
         </ul>
       </div>
 
       <div id="protocol" class="tab-content card">
-        <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Protocol Support</h3>
-        <p><strong>RTSP:</strong> Full RFC2326 support + RTP/RTCP packet simulation</p>
-        <p><strong>ONVIF:</strong> WS-Discovery + Device Management, Media, PTZ services</p>
+        <h3 class="text-2xl font-semibold text-indigo-700 mb-2">New Protocol Support</h3>
+        <p><strong>RTSP:</strong> DESCRIBE, SETUP, PLAY, TEARDOWN; RTP/RTCP packets using images/video/test streams</p>
+        <p><strong>ONVIF:</strong> WS-Discovery responder, Device, Media & PTZ services</p>
       </div>
 
       <div id="docker" class="tab-content card">
         <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Docker Enhancements</h3>
         <ul class="list-disc pl-6">
-          <li>Multi-stage builds, health checks</li>
-          <li>Auto-config generation & Docker Compose profiles</li>
+          <li>Multi-stage builds for smaller images</li>
+          <li>Docker health checks, log rotation</li>
+          <li>Compose profiles for dev/prod/test</li>
         </ul>
       </div>
 
       <div id="http" class="tab-content card">
-        <h3 class="text-2xl font-semibold text-indigo-700 mb-2">HTTP Interface</h3>
+        <h3 class="text-2xl font-semibold text-indigo-700 mb-2">HTTP Interface Improvements</h3>
         <ul class="list-disc pl-6">
-          <li>Dynamic error simulation</li>
-          <li>i18n/multi-language support</li>
-          <li>Fake password reset flow with lockouts</li>
+          <li>Fake login, password reset, account lockout</li>
+          <li>Language toggle (i18n)</li>
+          <li>Session timeouts, login forms & error simulation</li>
         </ul>
       </div>
     </section>
 
-    <section class="text-center mt-12 text-gray-600">
-      <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-    </section>
   </div>
 
   <script>
     function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
       document.getElementById(tabId).classList.add('active');
     }
   </script>
+
 </body>
 </html>
+
 
 
 </body>
