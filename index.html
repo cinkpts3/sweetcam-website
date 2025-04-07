@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetCam GSoC Implementation Plan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .tab-link {
+      transition: all 0.3s ease;
+    }
+    .tab-link:hover {
+      background-color: #4c6ef5;
+      transform: scale(1.05);
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px 0;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-indigo-100 via-purple-100 to-indigo-200 font-sans">
+
+  <div class="container mx-auto p-10">
+
+    <!-- Header Section -->
+    <header class="text-center mb-10">
+      <h1 class="text-5xl font-extrabold text-indigo-800">SweetCam GSoC 2025 Implementation Plan</h1>
+      <p class="text-xl mt-3 text-gray-700">Enhancing the IP Camera Honeypot with Multi-Protocol Support & Device Emulation</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="flex justify-center space-x-6 mb-8">
+      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('overview')">Overview</button>
+      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('template')">Template-Based Device Emulation</button>
+      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('protocol')">New Protocol Support</button>
+      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('docker')">Docker Enhancements</button>
+      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('http')">HTTP Interface Improvements</button>
+    </nav>
+
+    <!-- Tab Content -->
+    <div id="overview" class="tab-content active">
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Project Overview</h2>
+        <p>This project aims to transform SweetCam from a basic honeypot into a versatile, multi-protocol security tool...</p>
+      </div>
+    </div>
+
+    <div id="template" class="tab-content">
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Template-Based Device Emulation</h2>
+        <ul class="list-disc pl-6 text-gray-800">
+          <li>YAML-based templates defining device metadata, protocols, and web interface features.</li>
+          <li>Inheritance support and JSON Schema validation.</li>
+          <li>CLI utilities like sweetcam template validate and sweetcam template list.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="protocol" class="tab-content">
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">New Protocol Support</h2>
+        <h3 class="font-semibold text-indigo-600 mb-2">RTSP Enhancements</h3>
+        <ul class="list-disc pl-6 text-gray-800">
+          <li>Implement full RTSP state machine (RFC 2326)</li>
+          <li>Methods: DESCRIBE, SETUP, PLAY, TEARDOWN</li>
+          <li>RTP/RTCP packet simulation (static images, video files, test patterns)</li>
+        </ul>
+        <h3 class="font-semibold text-indigo-600 mt-4">ONVIF Implementation</h3>
+        <ul class="list-disc pl-6 text-gray-800">
+          <li>WS-Discovery responder for LAN discovery</li>
+          <li>Core services like Device Management, Media, PTZ control</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="docker" class="tab-content">
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Docker Usability Enhancements</h2>
+        <ul class="list-disc pl-6 text-gray-800">
+          <li>Multi-stage Docker builds</li>
+          <li>Health checks, log rotation, and auto-config generation</li>
+          <li>Docker Compose profiles for various setups</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="http" class="tab-content">
+      <div class="card">
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">HTTP Interface Improvements</h2>
+        <ul class="list-disc pl-6 text-gray-800">
+          <li>Dynamic error generation (invalid login, session timeout)</li>
+          <li>Internationalization (i18n) with multiple language support</li>
+          <li>Password recovery flow (fake email/SMS, lockout mechanisms)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript to Handle Tabs -->
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      const activeTab = document.getElementById(tabId);
+      activeTab.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
