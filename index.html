@@ -1,128 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SweetCam GSoC Implementation Plan</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .tab-link {
-      transition: all 0.3s ease;
-    }
-    .tab-link:hover {
-      background-color: #4c6ef5;
-      transform: scale(1.05);
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin: 20px 0;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV & SweetCam GSoC - 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add custom styles for visual improvements */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
 </head>
 <body class="bg-gradient-to-r from-indigo-100 via-purple-100 to-indigo-200 font-sans">
 
-  <div class="container mx-auto p-10">
-
-    <!-- Header Section -->
-    <header class="text-center mb-10">
-      <h1 class="text-5xl font-extrabold text-indigo-800">SweetCam GSoC 2025 Implementation Plan</h1>
-      <p class="text-xl mt-3 text-gray-700">Enhancing the IP Camera Honeypot with Multi-Protocol Support & Device Emulation</p>
+    <header class="text-center py-8 bg-indigo-700 text-white">
+        <h1 class="text-5xl font-bold">My Curriculum Vitae</h1>
+        <p class="mt-2 text-lg">BSc (Hons) in Computer Forensics and Security | SweetCam GSoC 2025</p>
     </header>
 
-    <!-- Navigation Tabs -->
-    <nav class="flex justify-center space-x-6 mb-8">
-      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('overview')">Overview</button>
-      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('template')">Template-Based Device Emulation</button>
-      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('protocol')">New Protocol Support</button>
-      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('docker')">Docker Enhancements</button>
-      <button class="tab-link py-3 px-5 text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none shadow-md transform transition duration-200" onclick="showTab('http')">HTTP Interface Improvements</button>
-    </nav>
+    <main class="container mx-auto px-6 py-10">
+        <!-- CV Section -->
+        <section id="cv">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-semibold text-indigo-800">Curriculum Vitae</h2>
+                <p class="text-lg text-gray-600">Detailed information about my education, technical skills, and projects.</p>
+            </div>
 
-    <!-- Tab Content -->
-    <div id="overview" class="tab-content active">
-      <div class="card">
-        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Project Overview</h2>
-        <p>This project aims to transform SweetCam from a basic honeypot into a versatile, multi-protocol security tool capable of emulating more advanced IP camera functionalities. The goal is to enhance SweetCam with RTSP, ONVIF, and HTTP protocol support, containerize the solution with Docker, and create a template-based system for flexible emulation of various camera models.</p>
-      </div>
-    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Personal Information Section -->
+                <div class="card p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-indigo-700">Personal Information</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><strong>Name:</strong> [Your Name]</li>
+                        <li><strong>Location:</strong> Waterford, Ireland</li>
+                        <li><strong>School:</strong> South East Technological University</li>
+                        <li><strong>Degree:</strong> BSc (Hons) in Computer Forensics and Security</li>
+                    </ul>
+                </div>
 
-    <div id="template" class="tab-content">
-      <div class="card">
-        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Template-Based Device Emulation</h2>
-        <ul class="list-disc pl-6 text-gray-800">
-          <li>YAML-based templates defining device metadata, protocols, and web interface features.</li>
-          <li>Inheritance support for templates, allowing easy reuse of base configurations.</li>
-          <li>JSON Schema validation for templates to ensure correctness and avoid errors.</li>
-          <li>CLI utilities like `sweetcam template validate` and `sweetcam template list` for managing templates.</li>
-        </ul>
-      </div>
-    </div>
+                <!-- Education Section -->
+                <div class="card p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-indigo-700">Education</h3>
+                    <p><strong>South East Technological University | Waterford, Ireland</strong></p>
+                    <p>BSc (Hons) in Computer Forensics and Security (2023 - 2027)</p>
+                    <p><strong>Relevant Courses:</strong> File System Forensics, Secure Programming & Scripting, Operating Systems, Computer Networks, Relational Databases, Applied Cryptography</p>
+                </div>
+            </div>
 
-    <div id="protocol" class="tab-content">
-      <div class="card">
-        <h2 class="text-3xl font-bold text-indigo-700 mb-4">New Protocol Support</h2>
-        <h3 class="font-semibold text-indigo-600 mb-2">RTSP Enhancements</h3>
-        <ul class="list-disc pl-6 text-gray-800">
-          <li>Implement full RTSP state machine (RFC 2326).</li>
-          <li>Support for RTSP methods: DESCRIBE, SETUP, PLAY, TEARDOWN.</li>
-          <li>RTP/RTCP packet simulation, including static images, video files, and test patterns.</li>
-        </ul>
-        <h3 class="font-semibold text-indigo-600 mt-4">ONVIF Implementation</h3>
-        <ul class="list-disc pl-6 text-gray-800">
-          <li>Implement WS-Discovery responder for LAN discovery of devices.</li>
-          <li>Provide core ONVIF services like Device Management, Media, and PTZ control.</li>
-        </ul>
-      </div>
-    </div>
+            <!-- Technical Skills Section -->
+            <div class="card p-6 bg-white rounded-lg shadow-lg mt-8">
+                <h3 class="text-xl font-bold text-indigo-700">Technical Skills</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700 mt-4">
+                    <li>Digital Forensics, Malware Analysis, SIEM (Splunk)</li>
+                    <li>Programming (Python, SQL)</li>
+                    <li>Windows/Linux, Networking (TCP/IP, Firewalls, IDS/IPS), AWS</li>
+                    <li>Security Tools: Wireshark, Ghidra Basics, Autopsy</li>
+                    <li>Problem Solving, Teamwork, Automation, Secure Programming</li>
+                </ul>
+            </div>
 
-    <div id="docker" class="tab-content">
-      <div class="card">
-        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Docker Usability Enhancements</h2>
-        <ul class="list-disc pl-6 text-gray-800">
-          <li>Multi-stage Docker builds for efficient image creation.</li>
-          <li>Health checks to ensure the container is running properly.</li>
-          <li>Log rotation and auto-configuration generation to streamline setup.</li>
-          <li>Docker Compose profiles for various deployment setups.</li>
-        </ul>
-      </div>
-    </div>
+            <!-- Projects Section -->
+            <div class="card p-6 bg-white rounded-lg shadow-lg mt-8">
+                <h3 class="text-xl font-bold text-indigo-700">Projects</h3>
+                <div class="mt-4">
+                    <h4 class="text-lg font-semibold text-indigo-600">Blood Cell Analyser</h4>
+                    <p>Built a 95% accurate image analysis tool for medical blood samples. Implemented colour change, noise reduction, and object detection algorithms.</p>
+                </div>
+                <div class="mt-4">
+                    <h4 class="text-lg font-semibold text-indigo-600">Drinks Menu Application</h4>
+                    <p>Developed a custom search & sort algorithm for a bar management system. Optimized product management, reducing staff training time by 40%.</p>
+                </div>
+                <div class="mt-4">
+                    <h4 class="text-lg font-semibold text-indigo-600">Hardware Shop Database Prototype</h4>
+                    <p>Designed a relational database for inventory and sales management. Developed efficient CRUD operations to handle store transactions.</p>
+                </div>
+            </div>
 
-    <div id="http" class="tab-content">
-      <div class="card">
-        <h2 class="text-3xl font-bold text-indigo-700 mb-4">HTTP Interface Improvements</h2>
-        <ul class="list-disc pl-6 text-gray-800">
-          <li>Dynamic error generation (invalid login, session timeout, etc.).</li>
-          <li>Internationalization (i18n) with support for multiple languages.</li>
-          <li>Password recovery flow with fake email/SMS and lockout mechanisms.</li>
-        </ul>
-      </div>
-    </div>
+            <!-- Volunteering & Experience Section -->
+            <div class="card p-6 bg-white rounded-lg shadow-lg mt-8">
+                <h3 class="text-xl font-bold text-indigo-700">Volunteering & Relevant Experience</h3>
+                <div class="mt-4">
+                    <h4 class="text-lg font-semibold text-indigo-600">Computer Department Representative</h4>
+                    <p>Represented the Computer Science department at Open Day, engaging with prospective students and parents.</p>
+                </div>
+                <div class="mt-4">
+                    <h4 class="text-lg font-semibold text-indigo-600">Capture the Flag (CTF) Team Leader | ZeroDays CTF</h4>
+                    <p>Led a team for ethical hacking competition, managed workflow, and strategic problem-solving.</p>
+                </div>
+                <div class="mt-4">
+                    <h4 class="text-lg font-semibold text-indigo-600">Staff Member | Supermacs</h4>
+                    <p>Developed strong communication and teamwork skills while managing customer requests and complaints.</p>
+                </div>
+            </div>
 
-  </div>
+            <!-- Contact Information Section -->
+            <div class="card p-6 bg-white rounded-lg shadow-lg mt-8">
+                <h3 class="text-xl font-bold text-indigo-700">Contact Information</h3>
+                <ul class="mt-4 space-y-2 text-gray-700">
+                    <li><strong>Email:</strong> [Your Email]</li>
+                    <li><strong>LinkedIn:</strong> [LinkedIn URL]</li>
+                    <li><strong>GitHub:</strong> [GitHub URL]</li>
+                </ul>
+            </div>
+        </section>
 
-  <!-- JavaScript to Handle Tabs -->
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      const activeTab = document.getElementById(tabId);
-      activeTab.classList.add('active');
-    }
-  </script>
+        <!-- SweetCam GSoC Project -->
+        <section id="sweetcam-project" class="mt-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold text-indigo-800">SweetCam GSoC 2025 Implementation Plan</h2>
+                <p class="text-lg text-gray-600">Enhancing the IP Camera Honeypot with Multi-Protocol Support & Device Emulation</p>
+            </div>
+
+            <div class="card p-6 bg-white rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-indigo-700">Project Overview</h3>
+                <p>This project aims to enhance SweetCam by introducing template-based device emulation, multi-protocol support (RTSP, ONVIF), improving Docker deployment, and refining the HTTP interface.</p>
+            </div>
+
+            <div class="card p-6 bg-white rounded-lg shadow-lg mt-6">
+                <h3 class="text-xl font-semibold text-indigo-700">Why I'm Well-Suited for This Project</h3>
+                <p>I’m passionate about cybersecurity and eager to contribute new ideas to SweetCam. I bring fresh perspectives and a willingness to learn and innovate in honeypot technologies.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 bg-indigo-700 text-white mt-12">
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
 
 </body>
 </html>
